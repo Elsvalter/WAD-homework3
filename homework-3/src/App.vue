@@ -5,6 +5,11 @@
   <router-link to="/login">Login</router-link>
  </nav>
  <router-view />
+ <footer>
+  <div class="container">
+      <p>Copyrighted content</p>
+  </div>
+ </footer>
 </div>
 </template>
 

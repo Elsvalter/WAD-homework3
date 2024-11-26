@@ -8,9 +8,13 @@
             </div>
             <img v-if="post.image" class="post_picture" :src="post.image" alt="Post Image">
             <p>{{post.body}}</p>
-            <p>{{post.author}}</p>
+            <div class="post_foot">
+                <img :src="require('@/assets/like.png')" @click="IncreaseLikes(post.id)" width="25" height="25" alt="Like icon">
+                <span>{{post.likes}} likes</span>
+            </div>
     </div>
-    </div>
+    <button v-on:click="ResetLikes"> Reset likes </button>
+</div>
 </template>
 
 <script>
@@ -20,8 +24,17 @@ export default {
         postsList() {
             return this.$store.getters.postsList
         }
+    },
+    
+    methods: {
+        IncreaseLikes(postId) {
+        this.$store.dispatch("IncreaseLikesAct", postId);
+        },
+        ResetLikes: function() {
+        this.$store.dispatch("ResetLikesAct");
+        }
     }
-}    
+}
 </script>
 
 <style>
@@ -39,7 +52,7 @@ export default {
     max-width: 450px;
     height: auto;
 }
-.post_head {
+.post_head, .post_foot {
     display: flex;
     justify-content: space-between;
     padding-bottom: 5px;

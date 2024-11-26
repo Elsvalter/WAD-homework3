@@ -88,9 +88,6 @@ export default {
   margin: 0 auto;
 }
 
-h1 {
-  text-align: center;
-}
 
 .form-group {
   margin-bottom: 15px;

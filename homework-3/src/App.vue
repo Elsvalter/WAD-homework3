@@ -7,7 +7,7 @@
  <router-view />
  <footer>
   <div class="container">
-      <p>Copyrighted content</p>
+      <p>Copyrighted content - footer</p>
   </div>
  </footer>
 </div>
@@ -24,5 +24,8 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+footer{
+  text-align: right;
 }
 </style>

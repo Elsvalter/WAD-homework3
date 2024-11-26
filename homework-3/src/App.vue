@@ -47,12 +47,13 @@ nav {
 footer {
   background-color: #333;
   color: white;
-  padding: 1rem;
+  padding: 10px 0;
   text-align: center;
   font-size: 0.9rem;
-  position: fixed;
+  position: relative;
   width: 100%;
   bottom: 0;
+  margin-top: 20px;
 }
 
 .container {

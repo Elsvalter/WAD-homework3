@@ -1,6 +1,5 @@
 <template>
   <div class="form-container">
-    <h1>Sign Up</h1>
     <form @submit.prevent="handleSubmit">
       <div class="form-group">
         <label for="email">Email</label>
@@ -56,20 +55,21 @@ export default {
     },
     getPasswordError(password) {
       if (password.length < 8 || password.length > 14) {
-        return "Password should be between 8 and 14 characters.";
-      } else if (!/[A-Z]/.test(password)) {
-        return "Password should include at least one uppercase letter.";
+        return " Password is not valid - Password should be between 8 and 14 characters.";
+      } else if (!/^[A-Z]/.test(password)) {
+        return " Password is not valid - Password should include at least one uppercase letter and it should start with an uppercase alphabet.";
       } else if (!/[a-z].*[a-z]/.test(password)) {
-        return "Password should include at least two lowercase letters.";
+        return " Password is not valid - Password should include at least two lowercase letters.";
       } else if (!/\d/.test(password)) {
-        return "Password should include at least one numeric digit.";
+        return " Password is not valid - Password should include at least one numeric digit.";
       } else if (!/_/g.test(password)) {
-        return "Password should include an underscore (_).";
+        return " Password is not valid - Password should include an underscore (_).";
       }
       return '';
     },
     handleSubmit() {
       console.log('Form submitted:', { email: this.email, password: this.password });
+      // Perform the signup action (e.g., call an API)
     }
   },
   watch: {

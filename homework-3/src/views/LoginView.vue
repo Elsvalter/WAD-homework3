@@ -1,11 +1,15 @@
 <template>
-    <div class="login">
-      <h1>This is a login page</h1>
-    </div>
-  </template>
+  <div class="signup">
+    <h1>Sign Up</h1>
+    <signup-form></signup-form>
+  </div>
+</template>
 
 <script>
-    export default {
-        name: 'LoginView'
-    }
+import SignupForm from '../components/SignupForm.vue'
+
+export default {
+  components: { SignupForm },
+  name: 'SignupView'
+}
 </script>

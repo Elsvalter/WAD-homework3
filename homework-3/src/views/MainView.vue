@@ -1,15 +1,14 @@
 <template>
-  <div class="signup">
-    <h1>Sign Up</h1>
-    <signup-form></signup-form>
-  </div>
-</template>
+    <div class="main">
+      <h1>This is the main page</h1>
+      <blog-posts></blog-posts>
+    </div>
+  </template>
 
 <script>
-import SignupForm from '../components/SignupForm.vue'
-
+import BlogPosts from '../components/BlogPosts.vue'
 export default {
-  components: { SignupForm },
-  name: 'SignupView'
-}
+  components: { BlogPosts },
+        name: 'MainView'
+    }
 </script>

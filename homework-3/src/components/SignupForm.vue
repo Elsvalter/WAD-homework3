@@ -1,5 +1,6 @@
 <template>
   <div class="form-container">
+    <h1>Sign Up</h1>
     <form @submit.prevent="handleSubmit">
       <div class="form-group">
         <label for="email">Email</label>
@@ -69,7 +70,6 @@ export default {
     },
     handleSubmit() {
       console.log('Form submitted:', { email: this.email, password: this.password });
-      // Perform the signup action (e.g., call an API)
     }
   },
   watch: {

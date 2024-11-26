@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     validatePassword(password) {
-      const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z].*[a-z])(?=.*\d)(?=.*_).{8,14}$/;
+      const passwordRegex = /^(?=[A-Z])(?=.*[A-Z])(?=.*[a-z].*[a-z])(?=.*\d)(?=.*_).{8,14}$/;
       if (!passwordRegex.test(password)) {
         this.passwordError = this.getPasswordError(password);
       } else {
@@ -69,7 +69,6 @@ export default {
     },
     handleSubmit() {
       console.log('Form submitted:', { email: this.email, password: this.password });
-      // Perform the signup action (e.g., call an API)
     }
   },
   watch: {
